@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+html{
+   font-size: 10px;
+}
+
+
+*{
+   box-sizing:border-box;
+}
+
+body{
+margin:0;
+padding:0;
+min-height:100vh;
+background-color: whitesmoke;
+background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+font-family: 'Oswald', sans-serif;
+}
+
+/* Title */
+
+h1{
+   text-align:center;
+   font-size:4rem;
+   letter-spacing:0.5rem;
+   margin-top:4rem;
+   color:#696464;
+}
+
+/* Loader */
+
+.loader{
+   position:fixed;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   background:rgba(255,255,255,0.8);
+}
+
+.loader img{
+   position:fixed;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+}
+
+/* Images */
+
+.image-container{
+   margin: 1rem 30%;
+}
+
+.image-container img{
+   width:100%;
+   margin-top:0.9rem;
+}
+
+
+/* back to top button */
+a.scroll-to-top{
+   padding:1rem 1.5rem;
+   font-size:2rem;
+   border-radius:50%;
+   outline:none;
+   border:none;
+   background:#696464;
+   color:#fff;
+   position:fixed;
+   cursor:pointer;
+   animation:fadeIn 1s ease-in 1;
+   animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn{
+   from{right:0.5rem;bottom:-4rem;}
+   to{right:0.5rem;bottom:4rem;}
+}
+/* Media queries */
+
+@media screen and (max-width:600px){
+   a.scroll-to-top{
+      visibility:hidden;
+   }
+   .image-container{
+      margin:1.5rem;
+   }
+
+   h1{
+      font-size:2.5rem;
+   }
+}
+
+@media screen and (min-width:600px) and (max-width:992px){
+ 
+   h1{
+      font-size:3rem;
+   }
+  
+   .image-container{
+      margin:1rem 10%;
+   }
+}
